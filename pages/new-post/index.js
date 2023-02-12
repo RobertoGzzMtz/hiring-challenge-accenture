@@ -23,8 +23,8 @@ const NewPostPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Add new Post </title>
-        <meta name="description" content="Add your own new React Posts!" />
+        <title>New Post </title>
+        <meta name="description" content="New Posts" />
       </Head>
       <NewPostForm onAddPost={addPostHandler} />
     </Fragment>

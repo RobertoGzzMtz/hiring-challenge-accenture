@@ -9,7 +9,7 @@ const postDetails = (props) => {
         <title>{props.postData.title}</title>
         <meta name="description" content={props.postData.description} />
       </Head>
-      <postDetail
+      <PostDetail
        
         title={props.postData.title}
         body={props.postData.body}
@@ -19,30 +19,26 @@ const postDetails = (props) => {
   );
 };
 
-export const getStaticPaths = async () => {
+// export const getStaticPaths = async () => {
   
-   await fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify({
-    title: data.title,
-    body: data.body,
-    userId: data.userId,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json)).catch(err => console.error(err));;
+//    await fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: 'POST',
+//   body: JSON.stringify({ }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json)).catch(err => console.error(err));;
 
 
-  return {
-    fallback: "blocking",
-    paths: posts.map((post) => ({
-      params: { postId: post._id.toString() },
-    })),
-  };
-};
+//   return {
+//     fallback: "blocking",
+//     paths: posts.map((post) => ({
+//       params: { postId: post._id.toString() },
+//     })),
+//   };
+// };
 
 export const getStaticProps = async (context) => {
   const postId = context.params.postId;
@@ -61,7 +57,7 @@ export const getStaticProps = async (context) => {
   .then((response) => response.json())
   .then((json) => console.log(json)).catch(err => console.error(err));;
 
-  
+
 
   return {
     props: {

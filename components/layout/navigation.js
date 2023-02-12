@@ -1,11 +1,11 @@
 import Link from "next/link";
-
+import classes from "../layout/Layout.module.css";
 
 
 function Navigation() {
   return (
-    <header >
-      <div >Accenture challenge create posts</div>
+    <header className={classes.header} >
+      <div className={classes.logo}>Accenture challenge create posts</div>
       <nav>
         <ul>
           <li>

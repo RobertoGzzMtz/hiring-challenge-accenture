@@ -1,8 +1,8 @@
-
+import classes from "../posts/post.module.css";
 
 const PostDetail = (props) => {
   return (
-    <section >
+    <section className={classes.detail}>
       <img src='' alt=''></img>
       <h1>{props.title}</h1>
       <p>{props.body}</p>

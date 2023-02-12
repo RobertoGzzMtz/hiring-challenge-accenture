@@ -1,11 +1,11 @@
 import Navigation from "./navigation";
-
+import classes from "../layout/layout.module.css";
 
 function Layout(props) {
   return (
     <div>
       <Navigation />
-      <main >{props.children}</main>
+      <main className={classes.main} >{props.children}</main>
     </div>
   );
 }
