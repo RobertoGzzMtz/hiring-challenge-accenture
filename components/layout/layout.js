@@ -1,4 +1,4 @@
-import Navigation from "../components/navigation";
+import Navigation from "./navigation";
 
 
 function Layout(props) {
